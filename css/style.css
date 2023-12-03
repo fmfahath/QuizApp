@@ -61,7 +61,7 @@ body{
     font-size: 18px;
     display: block;
     /* display: none; */
-    width: 120px;
+    /* width: 120px; */
     margin: 0 auto;
     cursor: pointer;
 }

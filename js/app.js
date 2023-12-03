@@ -123,19 +123,34 @@ function selectAnswer(target){
 }
 
 //next button evennt
-nextBtnEl.addEventListener('click', () => {
-    currentQuestionIndex++;
+nextBtnEl.addEventListener('click', () => { 
+    if(currentQuestionIndex < questions.length){
+        handleNextBtn();
+    }
+    else{
+        startQuiz();
+    }
+});
+
+
+//next button function
+function handleNextBtn(){
+     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length){
         showQuestion();
     }
     else{
         showScore();
     }
-});
-
+}
 
 //show score function
-
+function showScore(){
+    resetState();
+    questionEl.innerHTML = `You scored ${score} out of ${questions.length}`;
+    nextBtnEl.innerText = 'Play Again';
+    nextBtnEl.style.display = 'block';
+}
 
 
 
