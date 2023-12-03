@@ -1,39 +1,39 @@
 const questions = [
 
     {
-        question: "Which is the largest animal?",
+        question: "Which is not a programming language?",
         answers: [
-            {text: "Sark", correct: false},
-            {text: "Blue whale", correct: true},
-            {text: "Elephant", correct: false},
-            {text: "Giraffe", correct: false},
+            {text: "JavaScript", correct: false},
+            {text: "HTML 5", correct: true},
+            {text: "Python", correct: false},
+            {text: "Java", correct: false},
         ]
     },
     {
-        question: "Which is not a country in the world map?",
+        question: "Which will return a node list?",
         answers: [
-            {text: "Isreal", correct: true},
-            {text: "Maldives", correct: false},
-            {text: "Syria", correct: false},
-            {text: "Palestine", correct: false},
+            {text: "querySelectorAll", correct: true},
+            {text: "elementById", correct: false},
+            {text: "elementsByClass", correct: false},
+            {text: "elementsByTagName", correct: false},
         ]
     },
     {
-        question: "largest Desrt?",
+        question: "The 'function' and 'var' are known as:",
         answers: [
-            {text: "Kalhari", correct: false},
-            {text: "Gobi", correct: false},
-            {text: "Sahara", correct: true},
-            {text: "Saudi", correct: false},
+            {text: "Keywords", correct: false},
+            {text: "Data Types", correct: false},
+            {text: "Declaration Statments", correct: true},
+            {text: "Prototypes", correct: false},
         ]
     },
     {
-        question: "Which one is a space research company?",
+        question: "Which one of the following also known as Conditional Expression:",
         answers: [
-            {text: "Google", correct: false},
-            {text: "Tesla", correct: false},
-            {text: "Spce X", correct: true},
-            {text: "Microsoft", correct: false},
+            {text: "Alternative to if-else", correct: false},
+            {text: "Switch statement", correct: false},
+            {text: "If-then-else statement", correct: false},
+            {text: "immediate if", correct: true},
         ]
     },
 ];
@@ -62,7 +62,7 @@ function startQuiz(){
 
 //dislay questions & answers
 function showQuestion(){
-    //remove previous anser buttons
+    //remove previous answer buttons
     resetState();
 
     //display quetion
