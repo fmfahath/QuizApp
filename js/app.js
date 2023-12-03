@@ -122,4 +122,21 @@ function selectAnswer(target){
     nextBtnEl.style.display = 'block';
 }
 
+//next button evennt
+nextBtnEl.addEventListener('click', () => {
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }
+    else{
+        showScore();
+    }
+});
+
+
+//show score function
+
+
+
+
 startQuiz();
