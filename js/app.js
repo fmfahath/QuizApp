@@ -43,3 +43,21 @@ const questions = [
 //getting elements
 const questionEl = document.getElementById('question');
 const answerBtnEl  = document.getElementById('answer-btn');
+const nextBtnEl  = document.getElementById('next-btn');
+
+//variable
+let currentQuestionIndex = 0;
+let score = 0;
+
+function startQuiz(){
+    currentQuestionIndex = 0;
+    score = 0;
+    nextBtnEl.innerText = "Next";
+    showQuestion();
+}
+
+function showQuestion(){
+    let currentQuestion = questions[currentQuestionIndex].question;
+    let questionNo = currentQuestionIndex + 1;
+    questionEl.innerHTML =`${questionNo}. ${currentQuestion}`;
+}
