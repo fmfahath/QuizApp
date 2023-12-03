@@ -49,15 +49,42 @@ const nextBtnEl  = document.getElementById('next-btn');
 let currentQuestionIndex = 0;
 let score = 0;
 
+//start quiz
 function startQuiz(){
     currentQuestionIndex = 0;
     score = 0;
     nextBtnEl.innerText = "Next";
+    // console.log("current index: ", currentQuestionIndex);
+    // console.log("score: ", score);
+
     showQuestion();
 }
 
+//dislay questions & answers
 function showQuestion(){
-    let currentQuestion = questions[currentQuestionIndex].question;
+    //remove previous anser buttons
+    resetState();
+
+    //display quetion
+    let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
-    questionEl.innerHTML =`${questionNo}. ${currentQuestion}`;
+    questionEl.innerHTML =`${questionNo}. ${currentQuestion.question}`;
+
+    //display answer
+    currentQuestion.answers.forEach(answer => {
+        const btnEl = document.createElement('button');
+        btnEl.classList.add('btn');
+        btnEl.innerText = answer.text;
+        answerBtnEl.appendChild(btnEl);
+    });
 }
+
+function  resetState(){
+    nextBtnEl.style.display = 'none';
+
+    while(answerBtnEl.firstChild){
+        answerBtnEl.removeChild(answerBtnEl.firstChild);
+    }
+}
+
+startQuiz();
