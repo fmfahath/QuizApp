@@ -59,3 +59,11 @@ body{
     width: 120px;
     margin: 0 auto;
 }
+
+.correct{
+    background-color: rgb(160, 243, 160);
+}
+
+.incorrect{
+    background-color: rgb(245, 121, 121);
+}

@@ -76,15 +76,40 @@ function showQuestion(){
         btnEl.classList.add('btn');
         btnEl.innerText = answer.text;
         answerBtnEl.appendChild(btnEl);
+
+        //get and store ture/false value in dataset attribute
+        if(answer.correct){
+            btnEl.dataset.correct = answer.correct;
+        }
+
+        //select answer event
+        btnEl.addEventListener('click', (e) => {
+            const target = e.target;
+            selectAnswer(target);
+        }); 
     });
 }
 
+//function to remove previous answer buttons
 function  resetState(){
     nextBtnEl.style.display = 'none';
 
     while(answerBtnEl.firstChild){
         answerBtnEl.removeChild(answerBtnEl.firstChild);
     }
+}
+
+//select answer function
+function selectAnswer(target){
+    const selectedBtn = target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+    if(isCorrect){
+        selectedBtn.classList.add('correct');
+    }else{
+        selectedBtn.classList.add('incorrect');
+    }
+
+    nextBtnEl.style.display = 'block';
 }
 
 startQuiz();
