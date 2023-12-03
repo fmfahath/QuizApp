@@ -38,4 +38,8 @@ const questions = [
     },
 ];
 
-console.log(questions);
+// console.log(questions);
+
+//getting elements
+const questionEl = document.getElementById('question');
+const answerBtnEl  = document.getElementById('answer-btn');
