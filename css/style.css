@@ -8,3 +8,54 @@
 body{
     background-color: #555;
 }
+
+.app{
+    width: 70%;
+    max-height: 600px;
+    margin: 100px auto 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.app h1{
+    font-size: 35px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #b8b8b8;
+}
+
+#question{
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.btn{
+    width: 100%;
+    padding: 15px 30px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border: 2px solid  #222;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    transition: 0.3s all;
+}
+
+.btn:hover{
+    color: #fff;
+    background-color: #222;
+}
+
+#next-btn{
+    color: #fff;
+    background-color: #222;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    display: block;
+    /* display: none; */
+    width: 120px;
+    margin: 0 auto;
+}
