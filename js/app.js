@@ -109,6 +109,15 @@ function selectAnswer(target){
         selectedBtn.classList.add('incorrect');
     }
 
+    //disbale click after  the selection
+    Array.from(answerBtnEl.children).forEach(btn =>{
+        if(btn.dataset.correct === 'true'){
+            btn.classList.add('correct');
+        }
+        
+        btn.disabled = true;
+    });
+
     nextBtnEl.style.display = 'block';
 }
 
