@@ -94,6 +94,9 @@ function showQuestion(){
 function  resetState(){
     nextBtnEl.style.display = 'none';
 
+    //Doubt: this is not woring?
+    // answerBtnEl.removeChild(answerBtnEl.children); // why not work?
+
     while(answerBtnEl.firstChild){
         answerBtnEl.removeChild(answerBtnEl.firstChild);
     }
